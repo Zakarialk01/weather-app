@@ -1,4 +1,9 @@
+html,
 body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
   background-color: aliceblue;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,12 +13,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.App {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+  text-align: center;
 }
 header {
-  padding: 25px 15px 0px;
+  padding: 25px;
   background-color: darkcyan;
 }
 header h1 {
@@ -24,6 +33,11 @@ header h1 {
 }
 .searchbox {
   display: flex;
+  width: 70%;
+
+  margin-top: 3%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .searchbox-bar {
   width: 100%;
@@ -33,10 +47,10 @@ header h1 {
   outline: none;
   background: none;
   background-color: #eee;
-
+  border: 5px solid darkcyan;
   color: #53565a;
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 600;
   transition: 0, 4 ease-out;
 }
 .searchbox-bar:hover {
@@ -55,9 +69,97 @@ header h1 {
   font-weight: 300;
   transition: 0, 4 ease-out;
 }
+
 .Weather {
   margin: 20px;
+  border: 2px solid darkcyan;
+  background-color: #eee;
+  font-size: 20px;
+  padding: 1rem;
+}
+.Weather span {
+  color: darkcyan;
+  font-weight: 600;
+}
 
-  font-size: 30px;
-  font-family: cursive;
+.home {
+  margin-top: 3%;
+}
+.home img {
+  border-radius: 50%;
+}
+.home p {
+  background-color: darkcyan;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+}
+
+#footer {
+  position: absolute;
+  right: 0;
+  color: white;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: darkcyan;
+  text-align: center;
+  margin-top: calc(5% + 60px);
+  font-weight: 600;
+}
+
+#footer a {
+  color: wheat;
+  cursor: pointer;
+}
+
+@media (max-width: 620px) {
+  .form .searchbox {
+    width: 90%;
+    border: none;
+  }
+  .home img {
+    width: 60%;
+  }
+  .home p {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  #footer {
+    height: 70px;
+  }
+  .searchbox {
+    display: inline;
+  }
+  .searchbox-bar {
+    width: 50%;
+
+    display: block;
+    padding: 15px;
+    margin-top: 5%;
+    outline: none;
+
+    background-color: #eee;
+    border: 1px solid darkcyan;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0, 4 ease-out;
+  }
+  .searchbox-box {
+    width: 59%;
+    margin-top: 5%;
+  }
+  .home {
+    margin-top: 8%;
+  }
+  .home p {
+    border-radius: 20px;
+  }
 }

@@ -7,11 +7,9 @@ function App() {
   const APIKEY = "3c6241ea411d041a680ec839e2d82f3d";
   const [weather, setWeather] = useState([]);
   const [city, setCity] = useState("");
-  const [country, setCountry] = useState("");
 
   const clearInput = () => {
     setCity("");
-    setCountry("");
   };
   async function fetchData(e) {
     e.preventDefault();
@@ -19,7 +17,7 @@ function App() {
     clearInput();
 
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${APIKEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${APIKEY}`
     );
     const json = await response.json();
 
@@ -39,7 +37,7 @@ function App() {
         error: "",
       });
     } else {
-      alert("ENTER A VALID VALUE!!!");
+      alert(" City doesn't exist!!!");
     }
   }
 
@@ -60,15 +58,11 @@ function App() {
             className="searchbox-bar"
             onChange={(e) => setCity(e.target.value)}
           />
-          <input
-            type="text"
-            name="country"
-            value={country}
-            placeholder="Tap a country"
-            className="searchbox-bar"
-            onChange={(e) => setCountry(e.target.value)}
-          />
-          <button className="searchbox-box">Submit</button>
+
+          <button className="searchbox-box">
+            {" "}
+            <i class="fa fa-search"></i>
+          </button>
         </form>
       </div>
 

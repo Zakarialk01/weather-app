@@ -43,7 +43,7 @@ const Weather = ({
     if (Description) {
       const WeatherDescription = Description.split(" ");
       const cloudWeather = ["cloud", "cloudy", "clouds", "overcast"];
-      const cloudWeatherSky = ["clear", "clear sky", "sky"];
+      const cloudWeatherSky = ["clear", "clear sky", "sky", "Clear Sky"];
       const cloudWeatherRain = [
         "rainy",
         "rain",
@@ -84,8 +84,6 @@ console.log(str.includes("pléonasme"));  // false*/
             width="20%"
             height="20%"
           />
-
-          <p>Hello there ! Welcome , Search for a city </p>
         </div>
       </>
     );

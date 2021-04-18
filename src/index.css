@@ -33,7 +33,7 @@ header h1 {
 }
 .searchbox {
   display: flex;
-  width: 70%;
+  width: 30%;
 
   margin-top: 3%;
   margin-left: auto;
@@ -57,7 +57,6 @@ header h1 {
   box-shadow: 0px 0px 8px 3px #4484c4;
 }
 .searchbox-box {
-  width: 20%;
   padding: 15px;
   border: none;
   outline: none;
@@ -134,11 +133,9 @@ header h1 {
     height: 70px;
   }
   .searchbox {
-    display: inline;
+    width: 10%;
   }
   .searchbox-bar {
-    width: 50%;
-
     display: block;
     padding: 15px;
     margin-top: 5%;
@@ -153,13 +150,12 @@ header h1 {
     transition: 0, 4 ease-out;
   }
   .searchbox-box {
-    width: 59%;
     margin-top: 5%;
   }
   .home {
-    margin-top: 8%;
+    margin-top: 25%;
   }
-  .home p {
-    border-radius: 20px;
+  .home img {
+    width: 80%;
   }
 }
